@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Binary Clock</title>
+        <script src="/jquery-3.7.1.min.js"></script>
+        <script src="/Past-Projects/binary-clock/clock.js"></script>
+        <link rel="stylesheet" href="/Past-Projects/binary-clock/binary-clock-style.css">
+
+</head>
+
+<body>
+
+    <!-- <div id="test">time</div> -->
+    
+    <div id="canvas-container">
+        <canvas id="clockCanvas" width="1000px" height="1000px"></canvas>
+    </div>
+
+    <div id="info" class="tooltip">
+        <!-- <i class="fa fa-info-circle"></i> -->
+        <p id="info-i">&#8505;</p>
+        <span class="tooltiptext">
+            <strong>Need help?</strong><br>
+            <p>There are four columns containing four dots.
+                Ignore the middle two, that is a colon.</p>
+            <p>The number can be read from top to bottom of each column.</p>
+            <p>White = 0</p>
+            <p>Orange = 1</p>
+            <table id="cheat-code">
+                <tr>
+                    <td>0000 = </td>
+                    <td>&nbsp;0</td>
+                    <td>&nbsp;</td>
+                    <td>0101 = </td>
+                    <td>&nbsp;5</td>
+                </tr>
+                <tr>
+                    <td>0001 = </td>
+                    <td>&nbsp;1</td>
+                    <td>&nbsp; &nbsp;</td>
+                    <td>0110 = </td>
+                    <td>&nbsp;6</td>
+                </tr>
+                <tr>
+                    <td>0010 = </td>
+                    <td>&nbsp;2</td>
+                    <td>&nbsp;</td>
+                    <td>0111 = </td>
+                    <td>&nbsp;7</td>
+                </tr>
+                <tr>
+                    <td>0011 = </td>
+                    <td>&nbsp;3</td>
+                    <td>&nbsp;</td>
+                    <td>1000 = </td>
+                    <td>&nbsp;8</td>
+                </tr>
+                <tr>
+                    <td>0100 = </td>
+                    <td>&nbsp;4</td>
+                    <td>&nbsp;</td>
+                    <td>1001 = </td>
+                    <td>&nbsp;9</td>
+                </tr>
+            </table>
+
+            <p>Have fun.</p>
+            
+        </span>
+    </div>
+
+    <footer id="footer">
+        <p>&copy; 2023 bg | felt the need to make a binary clock for some reason</p>
+    </footer>
+
+</body>
+
+
+
+
+</html>

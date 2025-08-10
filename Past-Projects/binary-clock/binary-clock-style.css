@@ -1,0 +1,114 @@
+body {
+    background-color: #585858;
+    /* Original #474747 */
+    /* Google chrome bookmark bar color #e3e3e3 */
+}
+
+#test {
+    font-size: 50px;
+}
+
+#info {
+    font-size: 20px;
+    position:absolute;
+    top: 15px;
+    right: 15px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    width: 2%;
+    padding-bottom: 2%;
+    height: 0px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: white;
+} /* https://stackoverflow.com/questions/66079546/add-circle-border-around-font-awesome-icon */
+
+#info-i{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -20px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+}
+
+#info:hover{
+    background: #f78c2c;     
+    border: 2px solid #f78c2c;  
+    cursor: help;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+.tooltip .tooltiptext {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    visibility: hidden;
+    width: 200px;
+    height: 375px;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    /* border:3px solid black; */
+    top: 100%;
+    right: 100%;
+    /* margin-left: -300px;
+    margin-top: -300px; */
+    background-color:white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+} /* https://stackoverflow.com/questions/65075078/what-is-this-popup-thing-when-you-hover-over-something */
+
+
+#cheat-code td{
+    padding: 2px;
+    text-align: center;
+}
+
+
+#footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    /* padding: 10px; */
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    /* border: 1px solid black; */
+}
