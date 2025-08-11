@@ -78,4 +78,4 @@ function setup(){
 // On page load, call the setup function:
 document.addEventListener('DOMContentLoaded', setup);
 // Run a loop every 2 seconds:
-setInterval(loop, 3000);
+// setInterval(loop, 3000);
