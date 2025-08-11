@@ -184,6 +184,9 @@ li {
 
 /* MEDIA QUERIES */
 @media (max-width: 1075px) {
+    .nav-header {
+        width: 50px;
+    }
     .menu {
         display: none;
         position: absolute;
