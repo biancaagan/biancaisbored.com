@@ -37,21 +37,17 @@ function setup(){
     triOutlineGrad.addColorStop(1, "#262626ff");
     // Inner circle gradient:
     var innerCirGrad = ctx.createLinearGradient(centerX, centerY, 800, 800);
-    innerCirGrad.addColorStop(0, "#0c0c0cff");
-    innerCirGrad.addColorStop(1, "#2c2c2cff");
+    innerCirGrad.addColorStop(0, "#000000ff");
+    innerCirGrad.addColorStop(1, "#3c3c3cff");
 
     // Draw circle:
     ctx.beginPath();
     ctx.arc(centerX, centerY, 500, 0, 2 * Math.PI);
     ctx.fillStyle = cirGrad;
     ctx.fill();
-    ctx.stroke();
-
-    
-
-    ctx.lineWidth = 10;
+    // ctx.lineWidth = 10;
     ctx.strokeStyle = triOutlineGrad;
-    ctx.stroke();
+    // ctx.stroke();
 
     
     // Draw circle:
@@ -59,13 +55,14 @@ function setup(){
     ctx.arc(centerX, 340, 280, 0, 2 * Math.PI);
     ctx.fillStyle = innerCirGrad;
     ctx.fill();
+    ctx.lineWidth = 8;
     ctx.stroke();
 
     // Draw triangle:
     ctx.beginPath();
     ctx.moveTo(500,100);
-    ctx.lineTo(850,550);
-    ctx.lineTo(150,550);
+    ctx.lineTo(740,400);
+    ctx.lineTo(260,400);
     ctx.lineTo(500,100);
     ctx.fillStyle = "#19051eff";
     ctx.fill();
