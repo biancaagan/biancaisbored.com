@@ -1,20 +1,4 @@
 
-// Canvas:
-// const canvas = document.getElementById('myCanvas');
-// const context = canvas.getContext('2d');
-// const centerX = canvas.width / 2;
-// const centerY = canvas.height / 2;
-// const radius = 70;
-
-// context.beginPath();
-// context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-// context.fillStyle = 'green';
-// context.fill();
-// context.lineWidth = 5;
-// context.strokeStyle = '#003300';
-// context.stroke();
-
-
 function setup(){
     // Canvas:
     var canvas = document.getElementById("myCanvas");
@@ -69,9 +53,27 @@ function setup(){
     ctx.lineWidth = 10;
     ctx.strokeStyle = triOutlineGrad;
     ctx.stroke();
+
+    showTextButton.addEventListener('click', () => {
+        ctx.font = "50px Arial";
+        ctx.fillStyle = "white";
+        ctx.fillText("lol no", centerX-80, 300);   
+    });
 }
 
+// function submitFunction() {
+//     // Canvas:
+//     var canvas = document.getElementById("myCanvas");
+//     var ctx = canvas.getContext("2d");
+//     var canvasW = canvas.width;
+//     var canvasH = canvas.height;
+//     var centerX = canvas.width / 2;
+//     var centerY = canvas.height / 2;
 
+//     ctx.font = "30px Arial";
+//     ctx.fillStyle = "white";
+//     ctx.fillText("Hello world", centerX-80, 300);
+// }
 
 // On page load, call the setup function:
 document.addEventListener('DOMContentLoaded', setup);

@@ -86,10 +86,11 @@ textarea.input-text {
     border-radius: 8px;
 }
 
-.submit {
+.submit-button {
     background-color: white;
     font-family: IBM-Plex-Mono-SemiBold;
     font-size: 18px;
+    color: black;
     padding: 10px 32px;
     border-radius: 14px;
 }
