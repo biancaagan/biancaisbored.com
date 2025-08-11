@@ -1,5 +1,4 @@
 :root {
-  --fcg-green: #81bb4e;
   --go-to-grey: #dddddd;
   --highlight-orange: #ff8c28;
 }
@@ -236,7 +235,7 @@ li {
   stroke-dasharray: 1;
   width: 75vw;
   padding: 20px;
-  margin: 120px auto 200px auto;
+  margin: 100px auto 50px auto;
   word-wrap: break-word;
 }
 
@@ -285,8 +284,6 @@ li {
   /* border-style: dotted; */
   font-family: Jost-Regular;
   width: 75vw;
-  /* margin: 2px auto auto auto; */
-  /* padding-left: 45px; */
   font-size: 18px;
   word-wrap: break-word;
 }
