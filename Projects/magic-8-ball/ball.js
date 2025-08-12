@@ -1,14 +1,20 @@
 
 function setup(){
-    // Canvas:
+    // Ball canvas:
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     var canvasW = canvas.width;
     var canvasH = canvas.height;
     var centerX = canvas.width / 2;
     var centerY = canvas.height / 2;
-    // ctx.fillStyle = "#afafaf";  // #707070 original
-    // ctx.fillRect(0, 0, canvasW, canvasH);
+    
+    // // Text canvas:
+    // var textCanvas = document.getElementById("textCanvas");
+    // var ctxT = textCanvas.getContext("2d");
+    // var ctxTw = textCanvas.width;
+    // var ctxTh = textCanvas.height;
+    // var ctxTx = textCanvas.width / 2;
+    // var ctxTy = textCanvas.height / 2;
 
     // Gradients:
     // Outer circle gradient:
@@ -54,26 +60,45 @@ function setup(){
     ctx.strokeStyle = triOutlineGrad;
     ctx.stroke();
 
+    // Text
+    const answerList = [
+        "lol no",
+        "ask again",
+        "let me think about it",
+        "sure, i guess",
+        "fine.",
+        "maybe",
+        "idk"
+    ];
+
     showTextButton.addEventListener('click', () => {
-        ctx.font = "50px Arial";
-        ctx.fillStyle = "white";
-        ctx.fillText("lol no", centerX-80, 300);   
+        // Select text from list:
+        const randomIndex = Math.floor(Math.random() * answerList.length);
+        const randomAnswer = answerList[randomIndex];
+
+        // Re-draw triangle:
+        ctx.beginPath();
+        ctx.moveTo(500,100);
+        ctx.lineTo(740,400);
+        ctx.lineTo(260,400);
+        ctx.lineTo(500,100);
+        ctx.fillStyle = "#19051eff";
+        ctx.fill();
+        ctx.stroke();
+
+        setTimeout(() => {  
+            // Add text:
+            ctx.font = "30px Arial";
+            ctx.fillStyle = "white";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(randomAnswer, centerX, 320);
+        }, 1000);   // delay text         
     });
+
 }
 
-// function submitFunction() {
-//     // Canvas:
-//     var canvas = document.getElementById("myCanvas");
-//     var ctx = canvas.getContext("2d");
-//     var canvasW = canvas.width;
-//     var canvasH = canvas.height;
-//     var centerX = canvas.width / 2;
-//     var centerY = canvas.height / 2;
 
-//     ctx.font = "30px Arial";
-//     ctx.fillStyle = "white";
-//     ctx.fillText("Hello world", centerX-80, 300);
-// }
 
 // On page load, call the setup function:
 document.addEventListener('DOMContentLoaded', setup);
