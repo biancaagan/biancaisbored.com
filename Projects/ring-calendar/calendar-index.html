@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"
+    integrity="sha512-tc5xpAPaQDl/Uxd7ZVbV66v94Lys0IefMJSdlABPuzyCv0IXmr9TkqEQvZiWKRoXMSlP5YPRwpq2a+v5q2uzMg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/Projects/ring-calendar/calendar.js"></script>
+  <link rel="stylesheet" href="/style.css">
+
+  <title></title>
+
+</head>
+
+<!-- ----------------------- NEW NAV BAR ----------------------- -->
+<nav class="navbar">
+  <div class="nav-header">
+    <h3><a href="/" style="color: black;">bianca is bored</a></h3>
+  </div>
+
+  <ul class="nav-links top-nav">
+    <!-- USING CHECKBOX HACK -->
+    <input type="checkbox" class="hack" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+    <div class="menu">
+      <li class="top-nav-link"><a href="/">home</a></li>
+      <li class="top-nav-link"><a href="/Projects/projects.html">projects</a></li>
+      <li class="top-nav-link"><a href="/Submit/submit.html">submit an idea</a></li>
+    </div>
+
+  </ul>
+</nav>
+<!-- ----------------------- ----------- ----------------------- -->
+
+<body>
+  <main>
+    <div id="canvas-container">
+      <canvas id="calCanvas" width="800px" height="900px"></canvas>
+    </div>
+
+    <div class="page-section">
+      <h3 class="page-text" style="text-align: center;">
+        <a class="page-text-link" href="https://github.com/biancaagan/ring-calendar-extension" target="_blank">here's the link</a> to the github if for some reason you want to make it into a googlechrome extension.
+        <br><br>
+        this was inspired by the calendar product called <a class="page-text-link" href="https://www.ringadate.it/" target="_blank">ring-a-date</a>
+        by designer giorgio della beffa.
+      </h3>
+    </div>
+
+  </main>
+
+  <!-- ----------------------- FOOTER ----------------------- -->
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li class="footer-nav-link"><a href="/">home</a></li>
+        <li class="footer-nav-link"><a href="/Projects/projects.html">projects</a></li>
+        <li class="footer-nav-link"><a href="/Submit/submit.html">submit an idea</a></li>
+      </ul>
+    </div>
+    <div class="footer-credits-div">
+      <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan</h2>
+    </div>
+  </footer>
+  <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
