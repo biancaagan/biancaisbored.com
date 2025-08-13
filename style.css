@@ -190,6 +190,26 @@ li {
 
 
 /* ---------- PAGE DEFAULT ---------- */
+.back-button {
+    background-color: rgb(149, 149, 149);
+    font-family: IBM-Plex-Mono-SemiBold;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+    padding: 4px 6px 6px 6px;
+    margin: 4px 0 0 4px;
+    border-radius: 10px;
+    border-style: none;
+    width: 100px;
+    float: left;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: var(--highlight-orange);
+}
+
 .page-body {
     border-style: dashed;
     border-width: 1px;

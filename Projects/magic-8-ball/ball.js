@@ -68,7 +68,13 @@ function setup(){
         "sure, i guess",
         "fine.",
         "maybe",
-        "idk"
+        "idk",
+        "try later",
+        "???",
+        "what",
+        "nope",
+        "nahhh",
+        "suuuuure"
     ];
 
     showTextButton.addEventListener('click', () => {

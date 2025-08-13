@@ -67,6 +67,26 @@ main {
   flex-grow: 1;
 }
 
+.back-button {
+    background-color: rgb(149, 149, 149);
+    font-family: IBM-Plex-Mono-SemiBold;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+    padding: 4px 6px 6px 6px;
+    margin: 4px 0 0 4px;
+    border-radius: 10px;
+    border-style: none;
+    width: 100px;
+    float: left;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: var(--highlight-orange);
+}
+
 .container {
     margin: 100px 0 0 0;
     text-align: center;
@@ -93,6 +113,13 @@ textarea.input-text {
     color: black;
     padding: 10px 32px;
     border-radius: 14px;
+    border-style: none;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: rgb(117, 81, 126);
 }
 
 canvas {
