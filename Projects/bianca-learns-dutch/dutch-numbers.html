@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script src="/Projects/bianca-learns-dutch/numbers.js"></script>
+    <link rel="stylesheet" href="/Projects/bianca-learns-dutch/dutch-style.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <div>
+        <a href="/index.html"><button class="back-button" >&laquo; back</button></a>
+
+        <a href="/Projects/bianca-learns-dutch/dutch-time.html"><button class="dutch-time-button" >time</button></a>
+        <a href="/Projects/bianca-learns-dutch/dutch-numbers.html"><button class="dutch-numbers-button" >numbers</button></a>
+    </div>
+
+    <div class="container">
+    </div>
+
+    <div class="fade-text">
+        <p id="demo"></p>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="numbersCanvas" width="340" height="100"></canvas>
+        <canvas id="answerCanvas" width="340" height="100"></canvas>
+        <!-- <canvas id="textCanvas" width="1000px" height="1000px"></canvas> -->
+    </div>
+
+    <div class="container">
+            <textarea class="input-text" id="answerTextArea" placeholder="...?"></textarea>
+            <br>
+            <button class="submit-button" id="answerButton">answer</button>
+            <button class="submit-button" id="refreshButton">refresh</button>
+            <br>
+    </div>
+
+</body>
+
+</html>
