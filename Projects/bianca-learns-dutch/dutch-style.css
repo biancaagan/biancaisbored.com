@@ -59,7 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(212, 194, 92);
+    background-color: #f8da6d;
     font-family: IBM-Plex-Mono-SemiBold;
 }
 
