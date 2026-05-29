@@ -178,6 +178,11 @@ textarea.input-text {
     border-radius: 8px;
 }
 
+.answer-container {
+  display: block;
+  text-align: center;
+}
+
 .submit-button {
     background-color: white;
     font-family: IBM-Plex-Mono-SemiBold;
@@ -210,7 +215,7 @@ textarea.input-text {
     margin: 120px auto auto auto;
     display: block;
     /* width: 60vh; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 #answerCanvas {
@@ -220,7 +225,7 @@ textarea.input-text {
     display: block;
     /* width: 60vh;
     height: 30vh; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 

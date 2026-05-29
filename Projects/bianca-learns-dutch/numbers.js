@@ -39,13 +39,21 @@ function setup(){
     randomNum = Math.floor(Math.random() * 100) + 1;
 
     // Add number rectangle:
+    const rectW = 170;
+    const rectH = 120;
+    ctx.beginPath();
+    ctx.fillStyle = "none";
+    ctx.roundRect((centerX - rectW/2), (centerY - rectH/2), rectW, rectH, 8);
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 3;
+    ctx.stroke();
 
     // Add number:
     ctx.font = "80px CustomFont2";
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(randomNum, centerX, 58);
+    ctx.fillText(randomNum, centerX, 76);
 
 
 
@@ -53,6 +61,16 @@ function setup(){
         // Clear canvas:
         ctx.clearRect(0, 0, canvasW, canvasH);
         answerCtx.clearRect(0, 0, answerCanvasW, answerCanvasH);
+
+        // Add number rectangle:
+        const rectW = 170;
+        const rectH = 120;
+        ctx.beginPath();
+        ctx.fillStyle = "none";
+        ctx.roundRect((centerX - rectW/2), (centerY - rectH/2), rectW, rectH, 8);
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 3;
+        ctx.stroke();
 
         randomNum = Math.floor(Math.random() * 100) + 1;
 
@@ -63,9 +81,8 @@ function setup(){
         ctx.fillStyle = "black";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText(randomNum, centerX, 58);
-        
-        console.log(dutchNum);
+        ctx.fillText(randomNum, centerX, 76);
+    
     });
     
    
@@ -73,28 +90,46 @@ function setup(){
         // Clear answer canvas:
         answerCtx.clearRect(0, 0, answerCanvasW, answerCanvasH);
 
+        dutchNum = getDutchNumber(randomNum);
+
+        console.log(dutchNum);
+
         // Get answer value:
         const answerBox = document.getElementById('answerTextArea');
         const userAnswer = answerBox.value;
 
-        // let userResults;
-        // if(userAnswer.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, '')
-        //     === dutchNum.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, '')){
-        //         userResults = "Correct!";
-        // }
-        // else {
-        //     userResults = "Wrong.";
-        // }
+        let userResults;
+        if(userAnswer.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, '')
+            === dutchNum.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, '')){
+                
+                userResults = "Correct!";
 
-        // console.log(dutchNum);
-        // console.log(userResults);
+                // Add results:
+                answerCtx.font = "40px CustomFont2";
+                answerCtx.fillStyle = "black";
+                answerCtx.textAlign = "center";
+                answerCtx.textBaseline = "middle";
+                answerCtx.fillText(userResults, answerCenterX, 60);
 
-        // // Add results:
-        // answerCtx.font = "40px CustomFont2";
-        // answerCtx.fillStyle = "black";
-        // answerCtx.textAlign = "center";
-        // answerCtx.textBaseline = "middle";
-        // answerCtx.fillText(userResults, answerCenterX, 60);
+                // Clear text area:
+                answerBox.value = '';
+        }
+        else {
+            userResults = "Wrong.";
+            
+            // Add results:
+            answerCtx.font = "40px CustomFont2";
+            answerCtx.fillStyle = "black";
+            answerCtx.textAlign = "center";
+            answerCtx.textBaseline = "middle";
+            answerCtx.fillText(userResults, answerCenterX, 40);
+            answerCtx.font = "20px CustomFont2";
+            answerCtx.fillStyle = "rgb(134, 54, 54)";
+            answerCtx.fillText(dutchNum, answerCenterX, 80);
+        }
+
+        console.log(userResults);
+
     });
 
 }
