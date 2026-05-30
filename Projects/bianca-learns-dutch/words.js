@@ -10,6 +10,56 @@ async function loadFonts() {
 
 }
 
+const dutchWords = [
+        "Hallo", "Alstublieft", "Alsjeblieft", "Dank u", "Dankjewel", 
+
+        "januari", "februari", "mei", "april", "mei", "juni", "juli",
+        "augustus", "september", "oktober", "november", "december",
+
+        "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag",
+
+        "Fruit", "De appel", "De appels", "De banaan", "De bananen",
+        "De appelsien", "De appelsienen", "De aardbei", "De aardbeien", "De ananas",
+
+        "Wijn", "Pintje", "Boterham",
+
+        "Huis", "Thuis", "Slaapkamer", "Woonkamer",
+
+        "Zus",
+
+        "De tafel", "De stoel", "De zetel", "De kast", "Het tapijt", "De lamp",
+        "De frigo", "Het bed", "De deken", "Het kussen",
+        
+        "De hond", "De kat", "Het konijn", "De muis", "Het paard", "De koe",
+        "Het varken", "Het schaap", "De kip", "De olifant", "De vogel",
+        "De eend", "De vis"
+    ];
+
+const englishWords = [
+        "Hello", "Please (formal)", "Please (informal)", "Thank you (formal)", "Thank you (informal)",
+
+        "January", "February", "March", "April", "May", "June", "July",
+        "August", "Setpember", "October", "November", "December",
+
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
+
+        "Fruit", "The apple", "The apples", "The banana", "De bananas",
+        "The orange", "The oranges", "The strawberry", "The strawberries", "The pineapple",
+
+        "Wine", "Lil beer", "Sandwich",
+
+        "House", "Home", "Bedroom", "Livingroom",
+
+        "Sister",
+
+        "The table", "The chair", "The couch", "The closet", "The rug", "The lamp",
+        "The fridge", "The bed", "The blanket", "The pillow",
+
+        "The dog", "The cat", "The rabbit", "The muouse", "The horse", "The cow",
+        "The pig", "The sheep", "The chicken", "The elephant", "The bird",
+        "The duck", "The fish"
+    ];
+
 function setup(){
 
     let randomNum;
@@ -38,12 +88,17 @@ function setup(){
     ctx.clearRect(0, 0, canvasW, canvasH);
     answerCtx.clearRect(0, 0, answerCanvasW, answerCanvasH);
 
+    // Length of arrays:
+    let indexNum = dutchWords.length;
 
     // Random number, for index of words:
-    randomNum = Math.floor(Math.random() * 7) + 1;
+    randomNum = Math.floor(Math.random() * indexNum);
 
     dutchWord = getDutchWord(randomNum);
     englishWord = getEnglishWord(randomNum);
+
+    console.log("Array of dutch words: " + dutchWords.length);
+    console.log("Array of english words: " + englishWords.length);
 
 
     // Add first word (on page load it starts with Dutch to English):
@@ -98,7 +153,7 @@ function setup(){
         answerCtx.clearRect(0, 0, answerCanvasW, answerCanvasH);
 
         // Random number, for index of words:
-        randomNum = Math.floor(Math.random() * 7) + 1;
+        randomNum = Math.floor(Math.random() * indexNum);
         
         dutchWord = getDutchWord(randomNum);
         englishWord = getEnglishWord(randomNum);
@@ -199,21 +254,11 @@ function setup(){
 }
 
 function getDutchWord(randomIndex) {
-    const dutchWords = [
-        "Hallo", "Alstublieft", "Alsjeblieft", "Dank u", "Dankjewel",
-        "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"
-    ];
-
     return dutchWords[randomIndex];
 }
 
 function getEnglishWord(randomIndex) {
-    const englishWords = [
-        "Hello", "Please (formal)", "Please (informal)", "Thank you (formal)", "Thank you (informal)",
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-    ];
-
-    return englishWords[randomIndex];
+ return englishWords[randomIndex];
 }
 
 

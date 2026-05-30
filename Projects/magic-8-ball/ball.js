@@ -74,7 +74,9 @@ function setup(){
         "what",
         "nope",
         "nahhh",
-        "suuuuure"
+        "suuuuure",
+        "are you an idiot?",
+        "why are you asking me?"
     ];
 
     showTextButton.addEventListener('click', () => {

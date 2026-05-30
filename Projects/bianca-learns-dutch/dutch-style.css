@@ -91,6 +91,7 @@ main {
 }
 
 
+
 /* Dutch time button styling: */
 .dutch-time-button {
     background-color: rgb(255, 255, 255);
@@ -99,7 +100,7 @@ main {
     text-align: center;
     color: black;
     padding: 4px 6px 6px 6px;
-    margin: 4px 0 0 40px;
+    margin: 4px 0 0 20px;
     border-radius: 10px;
     border: 2px solid black;
     width: 100px;
@@ -291,3 +292,122 @@ input[type="radio"] {
     opacity: 0; /* Fade out to invisible */
   }
 }
+
+
+/* ---------- MOBILE ---------- */
+@media only screen and (max-width: 600px) {
+    img.company-logo {
+        width: 175px;
+    }
+
+    .menu {
+        border: black dashed 1px;
+        display: none;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 11px;
+        width: 100%;
+    }
+
+    ul {
+        width: fit-content;
+    }
+
+    li a {
+        padding: 0 20px 0 20px;
+    }
+
+    .menu li:hover {
+        cursor: pointer;
+        display: inline-block;
+        background-color: var(--highlight-orange);
+        /* transition: 0.3s ease; */
+    }
+
+    .hack:checked~.menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown {
+        /* left: 50%; */
+        top: 20px;
+        /* transform: translateX(10%); */
+    }
+
+    .dropdown li:hover {
+        background-color: white;
+    }
+
+    #page-title {
+        font-size: 10vw;
+    }
+
+    #page-subtitle {
+        font-size: 8vw;
+        text-align: center;
+        inline-size: 300px;
+        text-wrap: break-word;
+    }
+
+    #page-desc {
+        width: 80vw;
+        font-size: 4vw;
+    }
+
+    .contact-button {
+        font-size: 4vw;
+    }
+
+    .dutch-menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dutch-time-button {
+      margin: 4px 0 0 4px;
+    }
+
+
+    .footer-nav {
+        width: 200px;
+        font-size: 16px;
+        text-align: center;
+        padding: 0;
+        margin: auto auto 10px auto;
+    }
+
+    li.footer-nav-link {
+        /* border-style: dotted; */
+        width: 175px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-links {
+        margin: 10px 20px 10px;
+    }
+
+    .social-icon {
+        display: block;
+        padding: 15px 0 15px 0;
+    }
+
+    .footer-credits {
+        font-size: 12px;
+        text-align: center;
+        /* inline-size: 80px; */
+        overflow-wrap: break-word;
+        /* margin: 10px 0 10px 60px; */
+        /* float: center; */
+    }
+}
+
+/* ---------- ---------- ---------- */
