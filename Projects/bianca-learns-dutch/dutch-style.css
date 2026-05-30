@@ -59,6 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 80vh;
     background-color: #f8da6d;
     font-family: IBM-Plex-Mono-SemiBold;
 }
@@ -134,6 +135,28 @@ main {
     color: white;
 }
 
+/* Dutch words button styling: */
+.dutch-words-button {
+    background-color: rgb(255, 255, 255);
+    font-family: IBM-Plex-Mono-SemiBold;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    padding: 4px 6px 6px 6px;
+    margin: 4px 0 0 4px;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 100px;
+    float: left;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.dutch-words-button:hover {
+    background-color: rgb(134, 54, 54);
+    color: white;
+}
+
 /* Dutch button styling: */
 .dutch-button {
     background-color: rgb(255, 255, 255);
@@ -183,6 +206,16 @@ textarea.input-text {
   text-align: center;
 }
 
+.word-mode-container {
+  display: block;
+  text-align: center;
+  margin: 20px auto auto auto;
+}
+
+input[type="radio"] {
+  accent-color: rgb(134, 54, 54);
+}
+
 .submit-button {
     background-color: white;
     font-family: IBM-Plex-Mono-SemiBold;
@@ -210,6 +243,15 @@ textarea.input-text {
 }
 
 #numbersCanvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 120px auto auto auto;
+    display: block;
+    /* width: 60vh; */
+    /* border: 1px solid white; */
+}
+
+#wordsCanvas {
     padding-left: 0;
     padding-right: 0;
     margin: 120px auto auto auto;

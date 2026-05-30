@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/jquery-3.7.1.min.js"></script>
-    <script src="/Projects/bianca-learns-dutch/numbers.js"></script>
+    <script src="/Projects/bianca-learns-dutch/words.js"></script>
     <link rel="stylesheet" href="/Projects/bianca-learns-dutch/dutch-style.css" />
     <title>BG</title>
 </head>
@@ -27,17 +27,31 @@
     </div>
 
     <div id="canvas-container">
-        <canvas id="numbersCanvas" width="340" height="140"></canvas>
+        <canvas id="wordsCanvas" width="800" height="100"></canvas>
         <canvas id="answerCanvas" width="340" height="100"></canvas>
         <!-- <canvas id="textCanvas" width="1000px" height="1000px"></canvas> -->
     </div>
 
     <div class="answer-container">
             <textarea class="input-text" id="answerTextArea" placeholder="...?"></textarea>
+            
             <br>
             <button class="submit-button" id="answerButton">answer</button>
             <button class="submit-button" id="refreshButton">refresh</button>
-            <br>
+            
+            <br><br>
+            <p style="color: rgb(134, 54, 54);">* include if &#40;formal&#41; or &#40;informal&#41; *</p>
+    </div>
+
+    <div class="word-mode-container">
+        <form id="word-mode-form">
+                <p>Select mode:</p>
+                <input type="radio" id="mode1" name="choice" value="mode1" checked>
+                <label for="mode1">Guess the Dutch word</label>
+                <br>
+                <input type="radio" id="mode2" name="choice" value="mode2" unchecked>
+                <label for="mode2">Guess the English word</label>
+        </form>
     </div>
 
 </body>
