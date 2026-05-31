@@ -188,6 +188,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 600px;
   margin: 100px auto auto auto;
 }
 
@@ -208,6 +210,8 @@ main {
   padding: 10px;
   margin: auto;
   display: block;
+  max-width: 100%;
+  height: auto;
   /* width: 60vh; */
   /* border: 1px solid white; */
 }
@@ -260,14 +264,6 @@ input[type="radio"] {
     color: white;
 }
 
-
-#timeCanvas { }
-
-#numbersCanvas { }
-
-#wordsCanvas { }
-
-#answerCanvas { } 
 
 
 /* Fading text in and out continuously */
