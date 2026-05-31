@@ -59,9 +59,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    min-width: 80vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     background-color: #f8da6d;
     font-family: IBM-Plex-Mono-SemiBold;
+    /* border: 1px solid white; */
 }
 
 main {
@@ -193,6 +196,22 @@ main {
     font-size: 18px;
 }
 
+#canvas-container {
+  margin: 80px auto 0 auto;
+  padding: 10px;
+  /* border: 1px solid white; */
+}
+
+#timeCanvas, #numbersCanvas, #wordsCanvas, #answerCanvas {
+  /* padding-left: 0;
+  padding-right: 0; */
+  padding: 10px;
+  margin: auto;
+  display: block;
+  /* width: 60vh; */
+  /* border: 1px solid white; */
+}
+
 textarea.input-text {
     width: 40vh;
     height: 8vh;
@@ -205,17 +224,24 @@ textarea.input-text {
 .answer-container {
   display: block;
   text-align: center;
+  width: fit-content;
+  margin: 20px auto 0 auto;
+  padding: 10px;
+  /* border: 1px solid white; */
 }
 
 .word-mode-container {
   display: block;
   text-align: center;
-  margin: 20px auto auto auto;
+  margin: 8px auto 0 auto;
+  /* border: 1px solid white; */
 }
 
 input[type="radio"] {
   accent-color: rgb(134, 54, 54);
 }
+
+
 
 .submit-button {
     background-color: white;
@@ -234,42 +260,14 @@ input[type="radio"] {
     color: white;
 }
 
-#timeCanvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin: 120px auto auto auto;
-    display: block;
-    /* width: 60vh; */
-    /* border: 1px solid white; */
-}
 
-#numbersCanvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin: 120px auto auto auto;
-    display: block;
-    /* width: 60vh; */
-    /* border: 1px solid white; */
-}
+#timeCanvas { }
 
-#wordsCanvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin: 120px auto auto auto;
-    display: block;
-    /* width: 60vh; */
-    /* border: 1px solid white; */
-}
+#numbersCanvas { }
 
-#answerCanvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin: 10px auto auto auto;
-    display: block;
-    /* width: 60vh;
-    height: 30vh; */
-    /* border: 1px solid white; */
-}
+#wordsCanvas { }
+
+#answerCanvas { } 
 
 
 /* Fading text in and out continuously */
@@ -296,8 +294,8 @@ input[type="radio"] {
 
 /* ---------- MOBILE ---------- */
 @media only screen and (max-width: 600px) {
-    img.company-logo {
-        width: 175px;
+    body {
+      width: 100%;
     }
 
     .menu {
@@ -373,6 +371,26 @@ input[type="radio"] {
 
     .dutch-time-button {
       margin: 4px 0 0 4px;
+    }
+
+    #canvas-container {
+      margin: 70px auto 0 auto;
+      padding: 10px;
+    }
+
+    #timeCanvas, #numbersCanvas, #wordsCanvas, #answerCanvas {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .answer-container {
+      text-align: center;
+      margin: 8px auto 0 auto;
+      width: fit-content;
+    }
+
+    .word-mode-container {
+      margin: 8px auto 0 auto;
     }
 
 
