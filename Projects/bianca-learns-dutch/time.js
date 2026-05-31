@@ -58,13 +58,17 @@ function setup(){
     timeCtx.fillStyle = "black";
     timeCtx.textAlign = "center";
     timeCtx.textBaseline = "middle";
-    timeCtx.fillText(randomTime, timeCenterX, 58);
+    timeCtx.fillText(randomTime, timeCenterX, 76);
 
 
     refreshButton.addEventListener('click', () => {
         // Clear canvas:
         timeCtx.clearRect(0, 0, timeCanvasW, timeCanvasH);
         answerCtx.clearRect(0, 0, answerCanvasW, answerCanvasH);
+
+        // Clear text area:
+        const answerBox = document.getElementById('answerTextArea');
+        answerBox.value = '';
         
         // Random time:
         randomTime = "";
@@ -87,7 +91,7 @@ function setup(){
         timeCtx.fillStyle = "black";
         timeCtx.textAlign = "center";
         timeCtx.textBaseline = "middle";
-        timeCtx.fillText(randomTime, timeCenterX, 58);
+        timeCtx.fillText(randomTime, timeCenterX, 76);
 
     });
     

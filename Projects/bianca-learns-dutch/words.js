@@ -106,7 +106,7 @@ function setup(){
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(dutchWord, centerX, 60);
+    ctx.fillText(dutchWord, centerX, 76);
 
     // Mode selection form:
     const modeOptions = document.querySelectorAll('input[name="choice"]');
@@ -125,7 +125,7 @@ function setup(){
                 ctx.fillStyle = "black";
                 ctx.textAlign = "center";
                 ctx.textBaseline = "middle";
-                ctx.fillText(dutchWord, centerX, 60);
+                ctx.fillText(dutchWord, centerX, 76);
 
                 console.log("Mode selected: mode 1");
             } else if(selected === 'mode2'){    // English to Dutch
@@ -138,7 +138,7 @@ function setup(){
                 ctx.fillStyle = "black";
                 ctx.textAlign = "center";
                 ctx.textBaseline = "middle";
-                ctx.fillText(englishWord, centerX, 60);
+                ctx.fillText(englishWord, centerX, 76);
 
                 console.log("Mode selected: mode 2");
             }
@@ -164,7 +164,7 @@ function setup(){
             ctx.fillStyle = "black";
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            ctx.fillText(dutchWord, centerX, 60);
+            ctx.fillText(dutchWord, centerX, 76);
 
         } else if(selected === 'mode2'){    // English
             // Add word:
@@ -172,7 +172,7 @@ function setup(){
             ctx.fillStyle = "black";
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            ctx.fillText(englishWord, centerX, 60);
+            ctx.fillText(englishWord, centerX, 76);
         }     
 
     
@@ -201,7 +201,7 @@ function setup(){
                 answerCtx.fillStyle = "black";
                 answerCtx.textAlign = "center";
                 answerCtx.textBaseline = "middle";
-                answerCtx.fillText(userResults, answerCenterX, 60);
+                answerCtx.fillText(userResults, answerCenterX, 76);
 
                 // Clear text area:
                 answerBox.value = '';
@@ -231,7 +231,7 @@ function setup(){
                 answerCtx.fillStyle = "black";
                 answerCtx.textAlign = "center";
                 answerCtx.textBaseline = "middle";
-                answerCtx.fillText(userResults, answerCenterX, 60);
+                answerCtx.fillText(userResults, answerCenterX, 76);
 
                 // Clear text area:
                 answerBox.value = '';
